@@ -35,6 +35,9 @@ export const importToSegment = (
       //@ts-ignore
       const events = formatEventsFromRow(row.data, config, sortedTransformations)
 
+      if (events.track && ){
+        analytics.track(events.track)
+      }
       if (events.track){
         analytics.track(events.track)
       }
